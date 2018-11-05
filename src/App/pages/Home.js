@@ -9,12 +9,12 @@ class Home extends Component {
       <h1></h1>
       <Link to={'./classroom'}>
         <button variant="raised">
-            My List
+            Classroom List
         </button>
       </Link>
-      <Link to={'./classroom'}>
+      <Link to={'./lecturer'}>
         <button variant="raised">
-            My List
+            Lecturer List
         </button>
       </Link>
     </div>

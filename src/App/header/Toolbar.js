@@ -1,5 +1,4 @@
 import React from 'react';
-import SideDrawer from './SideDrawer';
 import DrawerToggleButton from './DrawerToggleButton';
 
 import './Toolbar.css';
@@ -15,8 +14,8 @@ const toolbar = props => {
       <div className="spacer" />
       <div className="toolbar_navigation-items">
         <ul>
-          <li><a href="/">Classrooms</a></li>
-          <li><a href="/">Lecturers</a></li>
+          <li><a href="/classroom">Classrooms</a></li>
+          <li><a href="/lecturer">Lecturers</a></li>
         </ul>
       </div>
     </nav>
