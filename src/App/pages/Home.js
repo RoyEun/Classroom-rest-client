@@ -17,6 +17,16 @@ class Home extends Component {
             Lecturer List
         </button>
       </Link>
+      <Link to={'./student'}>
+        <button variant="raised">
+            Lecturer List
+        </button>
+      </Link>
+      <Link to={'./course'}>
+        <button variant="raised">
+            Lecturer List
+        </button>
+      </Link>
     </div>
     );
   }
