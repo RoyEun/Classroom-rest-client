@@ -14,7 +14,7 @@ class App extends Component {
     const App = () => (
       <div>
         <Header/>
-        <main style={{marginTop: '64px'}}>
+        <main style={{marginTop: '75px'}}>
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/classroom' component={Classroom}/>

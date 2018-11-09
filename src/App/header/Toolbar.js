@@ -16,6 +16,8 @@ const toolbar = props => {
         <ul>
           <li><a href="/classroom">Classrooms</a></li>
           <li><a href="/lecturer">Lecturers</a></li>
+          <li><a href="/student">Students</a></li>
+          <li><a href="/course">Courses</a></li>
         </ul>
       </div>
     </nav>

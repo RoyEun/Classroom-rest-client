@@ -19,12 +19,12 @@ class Home extends Component {
       </Link>
       <Link to={'./student'}>
         <button variant="raised">
-            Lecturer List
+            Student List
         </button>
       </Link>
       <Link to={'./course'}>
         <button variant="raised">
-            Lecturer List
+            Course List
         </button>
       </Link>
     </div>

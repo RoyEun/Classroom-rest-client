@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import StudentTable from './StudentTable';
+
+
+import './Student.css';
 
 class Student extends Component {
   // Initialize the state
@@ -7,6 +11,7 @@ class Student extends Component {
     this.state = {
       student: []
     }
+    this.getStudentById = this.getStudentById.bind(this);
   }
 
   // Fetch the list on first mount
@@ -16,40 +21,38 @@ class Student extends Component {
 
   // Retrieves the list of items from the Express app
   getStudent = () => {
-    fetch('/api/student')
+    fetch('/api/student/all')
     .then(res => res.json())
     .then((student) => {
-      console.log(student);
       this.setState({student})
     });
   }
 
+  getStudentById = (props) => {
+    fetch('/api/student/:id', {
+      method: 'GET',
+      headers: {
+        'id': props.id
+      }
+    })
+  }
+
   render() {
     const { student } = this.state;
-
     console.log(student);
 
     return (
       <div className="App">
-        <h1>List of Students with Courses</h1>
-        {/* Check to see if any items are found*/}
-        {student.length ? (
-          <div>
-            {/* Render the student of items */}
-            {student.map((item) => {
-              return(
-                <div>
-                  {`${item.id}, ${item.student_name}, ${item.classroom.classroom_id}, ${item.classroom.class_name}`}
-                </div>
-              );
-            })}
-          </div>
-        ) : (
+        <h1 className="list_header"> Student Schedules </h1>
+        {student.length ?
+          <StudentTable
+            getStudentById={this.getStudentById}
+            student={student}
+          /> : (
           <div>
             <h2>No List Items Found</h2>
           </div>
-        )
-      }
+        )}
       </div>
     );
   }
