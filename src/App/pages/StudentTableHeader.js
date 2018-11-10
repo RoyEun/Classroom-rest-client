@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentTableHeader = () => {
+const StudentTableHeader = (props) => {
   return (
     <div className="theader">
       <div className="table_header">Student ID</div>

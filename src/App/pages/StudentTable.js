@@ -8,7 +8,7 @@ const StudentTable = (props) => {
   return (
     <div className="table" id="results">
       <StudentTableHeader />
-      {student.map(item => <StudentTableRow key={item.id} id={item.key} item={item} />)}
+      {student.map((item, i) => <StudentTableRow index={i} id={item.id} item={item} />)}
     </div>
   );
 };

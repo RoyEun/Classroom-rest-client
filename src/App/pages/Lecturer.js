@@ -49,7 +49,6 @@ class Lecturer extends Component {
             lecturer={lecturer}
           /> : (
           <div>
-            <h2>No List Items Found</h2>
           </div>
         )}
       </div>

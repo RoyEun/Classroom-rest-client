@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentTableHeader = ({item, key}) => {
+const StudentTableRow = ({item, key, index}) => {
   return (
     <div className="table_row">
       <div className="table_small">
@@ -17,14 +17,14 @@ const StudentTableHeader = ({item, key}) => {
       </div>
       <div className="table_small">
         <div className="table_cell">Course</div>
-        <div className="table_cell">{item.courses[0].course_name}</div>
+        <div className="table_cell">{item.courses[index].course_name}</div>
       </div>
       <div className="table_small">
         <div className="table_cell">Lecturer</div>
-        <div className="table_cell">{item.courses[0].lecturer_name || `TBD`}</div>
+        <div className="table_cell">{item.courses[index].lecturer_name || `TBD`}</div>
       </div>
     </div>
   );
 };
 
-export default StudentTableHeader;
+export default StudentTableRow;

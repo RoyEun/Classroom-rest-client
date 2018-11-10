@@ -24,7 +24,10 @@ class Student extends Component {
     fetch('/api/student/all')
     .then(res => res.json())
     .then((student) => {
-      this.setState({student})
+      let res = student.filter((item) => {
+        return !!item["student_name"] ? true : false;
+      })
+      this.setState({student: res})
     });
   }
 
@@ -39,7 +42,6 @@ class Student extends Component {
 
   render() {
     const { student } = this.state;
-    console.log(student);
 
     return (
       <div className="App">
@@ -49,9 +51,7 @@ class Student extends Component {
             getStudentById={this.getStudentById}
             student={student}
           /> : (
-          <div>
-            <h2>No List Items Found</h2>
-          </div>
+          <div/>
         )}
       </div>
     );

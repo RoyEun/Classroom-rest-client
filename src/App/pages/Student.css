@@ -140,12 +140,3 @@
     border-bottom-right-radius: 5px;
   }
 }
-
-.list_header {
-  font-size: 2.5em;
-  font-family: sans-serif;
-  color: #3f6764;
-  font-weight: 525;
-  padding-top: 10px;
-  background-color: #f6f6f4;
-}
